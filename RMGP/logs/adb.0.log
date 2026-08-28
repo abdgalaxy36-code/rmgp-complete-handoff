@@ -1,0 +1,715 @@
+--- adb starting (pid 24730) ---
+08-25 11:13:13.147 24730 24730 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 11:13:13.147 24730 24730 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 11:13:13.147 24730 24730 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 11:13:13.147 24730 24730 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 11:13:13.147 24730 24730 I adb     : main.cpp:63 
+08-25 11:13:13.153 24730 24730 I adb     : auth.cpp:416 adb_auth_init...
+08-25 11:13:13.154 24730 24730 I adb     : auth.cpp:220 User key '/root/.android/adbkey' does not exist...
+08-25 11:13:13.154 24730 24730 I adb     : auth.cpp:64 generate_key(/root/.android/adbkey)...
+08-25 11:13:13.260 24730 24730 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 11:13:13.260 24730 24730 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 11:14:34.883 24730 26599 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 11:14:34.886 24730 26600 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 11:14:34.888 24730 24730 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 11:14:34.888 24730 24730 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 11:14:34.904 24730 24730 I adb     : auth.cpp:435 Calling send_auth_publickey
+08-25 11:14:36.283 24730 24730 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 17227) ---
+08-25 11:20:50.916 17227 17227 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 11:20:50.916 17227 17227 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 11:20:50.916 17227 17227 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 11:20:50.916 17227 17227 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 11:20:50.916 17227 17227 I adb     : main.cpp:63 
+08-25 11:20:50.926 17227 17227 I adb     : auth.cpp:416 adb_auth_init...
+08-25 11:20:50.934 17227 17227 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 11:20:50.935 17227 17227 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 11:20:54.502 17227 17235 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 11:21:46.212 17227 17667 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 11:21:46.212 17227 17666 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 11:21:46.213 17227 17227 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 11:21:46.213 17227 17227 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 11:21:46.217 17227 17227 I adb     : auth.cpp:435 Calling send_auth_publickey
+08-25 11:21:48.141 17227 17227 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+08-25 11:23:10.115 17227 17895 I adb     : transport.cpp:300 BlockingConnectionAdapter(<unknown>): destructing
+08-25 11:23:10.115 17227 17895 I adb     : transport.cpp:401 BlockingConnectionAdapter(<unknown>): not started
+--- adb starting (pid 15737) ---
+08-25 12:31:29.722 15737 15737 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 12:31:29.722 15737 15737 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 12:31:29.722 15737 15737 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 12:31:29.722 15737 15737 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 12:31:29.722 15737 15737 I adb     : main.cpp:63 
+08-25 12:31:29.728 15737 15737 I adb     : auth.cpp:416 adb_auth_init...
+08-25 12:31:29.741 15737 15737 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 12:31:29.741 15737 15737 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 12:31:29.747 15737 15748 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 12:31:29.747 15737 15747 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 12:31:29.748 15737 15737 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 12:31:29.748 15737 15737 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 12:31:29.754 15737 15737 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 12:31:32.757 15737 15801 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 12:31:32.757 15737 15803 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 12:31:32.759 15737 15737 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 12:31:32.759 15737 15737 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 12:31:32.763 15737 15737 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 14800) ---
+08-25 12:36:57.841 14800 14800 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 12:36:57.841 14800 14800 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 12:36:57.841 14800 14800 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 12:36:57.841 14800 14800 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 12:36:57.841 14800 14800 I adb     : main.cpp:63 
+08-25 12:36:57.847 14800 14800 I adb     : auth.cpp:416 adb_auth_init...
+08-25 12:36:57.854 14800 14800 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 12:36:57.854 14800 14800 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 12:36:57.857 14800 14807 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 12:36:57.857 14800 14808 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 12:36:57.858 14800 14800 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 12:36:57.858 14800 14800 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 12:36:57.889 14800 14800 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 12:37:00.866 14800 14816 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 12:37:00.867 14800 14815 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 12:37:00.868 14800 14800 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 12:37:00.868 14800 14800 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 12:37:00.874 14800 14800 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+08-25 12:54:50.947 14800 18388 I adb     : transport.cpp:300 BlockingConnectionAdapter(<unknown>): destructing
+08-25 12:54:50.949 14800 18388 I adb     : transport.cpp:401 BlockingConnectionAdapter(<unknown>): not started
+--- adb starting (pid 14622) ---
+08-25 13:10:29.085 14622 14622 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 13:10:29.085 14622 14622 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 13:10:29.085 14622 14622 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 13:10:29.085 14622 14622 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 13:10:29.085 14622 14622 I adb     : main.cpp:63 
+08-25 13:10:29.089 14622 14622 I adb     : auth.cpp:416 adb_auth_init...
+08-25 13:10:29.094 14622 14622 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 13:10:29.094 14622 14622 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 13:11:10.252 14622 15724 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 13:11:10.252 14622 15725 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 13:11:10.253 14622 14622 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 13:11:10.253 14622 14622 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 13:11:10.265 14622 14622 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+08-25 13:30:48.645 14622 18634 I adb     : transport.cpp:300 BlockingConnectionAdapter(<unknown>): destructing
+08-25 13:30:48.646 14622 18634 I adb     : transport.cpp:401 BlockingConnectionAdapter(<unknown>): not started
+--- adb starting (pid 16124) ---
+08-25 13:54:27.677 16124 16124 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 13:54:27.677 16124 16124 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 13:54:27.677 16124 16124 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 13:54:27.677 16124 16124 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 13:54:27.677 16124 16124 I adb     : main.cpp:63 
+08-25 13:54:27.682 16124 16124 I adb     : auth.cpp:416 adb_auth_init...
+08-25 13:54:27.692 16124 16124 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 13:54:27.692 16124 16124 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 13:54:27.695 16124 16130 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 13:54:27.696 16124 16131 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 13:54:27.699 16124 16124 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 13:54:27.700 16124 16124 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 13:54:27.732 16124 16124 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 13:54:30.708 16124 16142 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 13:54:30.709 16124 16143 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 13:54:30.709 16124 16124 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 13:54:30.709 16124 16124 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 13:54:30.714 16124 16124 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 13992) ---
+08-25 14:10:57.996 13992 13992 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 14:10:57.996 13992 13992 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 14:10:57.996 13992 13992 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 14:10:57.996 13992 13992 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 14:10:57.996 13992 13992 I adb     : main.cpp:63 
+08-25 14:10:58.001 13992 13992 I adb     : auth.cpp:416 adb_auth_init...
+08-25 14:10:58.007 13992 13992 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 14:10:58.007 13992 13992 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 14:11:01.020 13992 14029 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 14:11:33.258 13992 14429 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 14:11:33.258 13992 14430 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 14:11:33.260 13992 13992 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 14:11:33.260 13992 13992 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 14:11:33.267 13992 13992 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 15761) ---
+08-25 15:19:49.928 15761 15761 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 15:19:49.928 15761 15761 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 15:19:49.928 15761 15761 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 15:19:49.928 15761 15761 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 15:19:49.928 15761 15761 I adb     : main.cpp:63 
+08-25 15:19:49.933 15761 15761 I adb     : auth.cpp:416 adb_auth_init...
+08-25 15:19:49.940 15761 15761 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 15:19:49.940 15761 15761 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 15:19:52.958 15761 15769 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 15:20:33.095 15761 16169 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 15:20:33.095 15761 16171 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 15:20:33.096 15761 15761 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 15:20:33.096 15761 15761 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 15:20:33.101 15761 15761 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 16045) ---
+08-25 15:25:30.043 16045 16045 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 15:25:30.043 16045 16045 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 15:25:30.043 16045 16045 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 15:25:30.043 16045 16045 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 15:25:30.043 16045 16045 I adb     : main.cpp:63 
+08-25 15:25:30.073 16045 16045 I adb     : auth.cpp:416 adb_auth_init...
+08-25 15:25:30.089 16045 16045 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 15:25:30.089 16045 16045 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 15:25:30.103 16045 16070 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 15:25:30.104 16045 16071 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 15:25:30.107 16045 16045 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 15:25:30.107 16045 16045 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 15:25:30.139 16045 16045 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 15:25:33.133 16045 16145 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 15:25:33.134 16045 16146 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 15:25:33.135 16045 16045 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 15:25:33.136 16045 16045 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 15:25:33.142 16045 16045 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 15658) ---
+08-25 15:50:45.582 15658 15658 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 15:50:45.582 15658 15658 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 15:50:45.582 15658 15658 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 15:50:45.582 15658 15658 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 15:50:45.582 15658 15658 I adb     : main.cpp:63 
+08-25 15:50:45.586 15658 15658 I adb     : auth.cpp:416 adb_auth_init...
+08-25 15:50:45.591 15658 15658 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 15:50:45.591 15658 15658 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 15:50:45.593 15658 15665 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 15:50:45.594 15658 15666 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 15:50:45.594 15658 15658 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 15:50:45.594 15658 15658 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 15:50:45.600 15658 15658 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 15:50:48.627 15658 15676 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 15:50:48.631 15658 15677 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 15:50:48.632 15658 15658 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 15:50:48.632 15658 15658 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 15:50:48.645 15658 15658 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 13889) ---
+08-25 15:54:47.581 13889 13889 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 15:54:47.581 13889 13889 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 15:54:47.581 13889 13889 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 15:54:47.581 13889 13889 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 15:54:47.581 13889 13889 I adb     : main.cpp:63 
+08-25 15:54:47.589 13889 13889 I adb     : auth.cpp:416 adb_auth_init...
+08-25 15:54:47.600 13889 13889 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 15:54:47.600 13889 13889 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 15:54:47.604 13889 13996 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 15:54:47.605 13889 13997 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 15:54:47.606 13889 13889 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 15:54:47.606 13889 13889 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 15:54:47.631 13889 13889 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 15:54:50.613 13889 14102 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 15:54:50.614 13889 14103 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 15:54:50.616 13889 13889 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 15:54:50.616 13889 13889 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 15:54:50.620 13889 13889 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 17208) ---
+08-25 16:04:57.388 17208 17208 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 16:04:57.388 17208 17208 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 16:04:57.388 17208 17208 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 16:04:57.388 17208 17208 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 16:04:57.388 17208 17208 I adb     : main.cpp:63 
+08-25 16:04:57.397 17208 17208 I adb     : auth.cpp:416 adb_auth_init...
+08-25 16:04:57.416 17208 17208 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 16:04:57.416 17208 17208 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 16:04:57.426 17208 17227 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 16:04:57.427 17208 17228 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 16:04:57.429 17208 17208 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 16:04:57.429 17208 17208 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 16:04:57.463 17208 17208 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 16:05:00.454 17208 17324 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 16:05:00.454 17208 17325 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 16:05:00.457 17208 17208 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 16:05:00.457 17208 17208 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 16:05:00.463 17208 17208 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 14339) ---
+08-25 16:25:24.724 14339 14339 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 16:25:24.724 14339 14339 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 16:25:24.724 14339 14339 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 16:25:24.724 14339 14339 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 16:25:24.724 14339 14339 I adb     : main.cpp:63 
+08-25 16:25:24.742 14339 14339 I adb     : auth.cpp:416 adb_auth_init...
+08-25 16:25:24.750 14339 14339 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 16:25:24.750 14339 14339 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 16:25:24.753 14339 14413 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 16:25:24.755 14339 14414 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 16:25:24.756 14339 14339 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 16:25:24.756 14339 14339 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 16:25:24.795 14339 14339 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 16:25:27.769 14339 14975 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 16:25:27.770 14339 14974 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 16:25:27.771 14339 14339 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 16:25:27.771 14339 14339 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 16:25:27.776 14339 14339 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 21483) ---
+08-25 17:29:07.057 21483 21483 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 17:29:07.057 21483 21483 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 17:29:07.057 21483 21483 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 17:29:07.057 21483 21483 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 17:29:07.057 21483 21483 I adb     : main.cpp:63 
+08-25 17:29:07.073 21483 21483 I adb     : auth.cpp:416 adb_auth_init...
+08-25 17:29:07.085 21483 21483 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 17:29:07.085 21483 21483 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 17:29:07.094 21483 21490 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 17:29:07.100 21483 21491 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 17:29:07.102 21483 21483 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 17:29:07.102 21483 21483 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 17:29:07.143 21483 21483 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 18:10:40.836 21483  7829 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 18:10:40.837 21483  7830 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 18:10:40.850 21483 21483 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 18:10:40.850 21483 21483 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 18:10:40.878 21483 21483 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 14588) ---
+08-25 18:16:30.983 14588 14588 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 18:16:30.983 14588 14588 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 18:16:30.983 14588 14588 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 18:16:30.983 14588 14588 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 18:16:30.983 14588 14588 I adb     : main.cpp:63 
+08-25 18:16:30.987 14588 14588 I adb     : auth.cpp:416 adb_auth_init...
+08-25 18:16:30.992 14588 14588 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 18:16:30.992 14588 14588 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 18:16:30.996 14588 14594 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 18:16:30.996 14588 14595 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 18:16:31.007 14588 14588 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 18:16:31.007 14588 14588 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 18:16:31.052 14588 14588 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 18:16:34.083 14588 14910 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 18:16:34.086 14588 14909 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 18:16:34.086 14588 14588 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 18:16:34.086 14588 14588 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 18:16:34.090 14588 14588 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+08-25 18:39:01.642 14588 19594 I adb     : transport.cpp:300 BlockingConnectionAdapter(<unknown>): destructing
+08-25 18:39:01.642 14588 19594 I adb     : transport.cpp:401 BlockingConnectionAdapter(<unknown>): not started
+--- adb starting (pid 14465) ---
+08-25 18:41:38.446 14465 14465 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 18:41:38.446 14465 14465 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 18:41:38.446 14465 14465 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 18:41:38.446 14465 14465 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 18:41:38.446 14465 14465 I adb     : main.cpp:63 
+08-25 18:41:38.454 14465 14465 I adb     : auth.cpp:416 adb_auth_init...
+08-25 18:41:38.460 14465 14465 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 18:41:38.460 14465 14465 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 18:41:38.463 14465 14470 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 18:41:38.463 14465 14471 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 18:41:38.465 14465 14465 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 18:41:38.465 14465 14465 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 18:41:38.493 14465 14465 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 18:41:41.482 14465 14477 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 18:41:41.483 14465 14478 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 18:41:41.484 14465 14465 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 18:41:41.484 14465 14465 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 18:41:41.495 14465 14465 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 14664) ---
+08-25 18:58:41.358 14664 14664 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 18:58:41.358 14664 14664 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 18:58:41.358 14664 14664 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 18:58:41.358 14664 14664 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 18:58:41.358 14664 14664 I adb     : main.cpp:63 
+08-25 18:58:41.364 14664 14664 I adb     : auth.cpp:416 adb_auth_init...
+08-25 18:58:41.372 14664 14664 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 18:58:41.372 14664 14664 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 18:58:41.374 14664 14672 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 18:58:41.374 14664 14673 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 18:58:41.375 14664 14664 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 18:58:41.375 14664 14664 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 18:58:41.395 14664 14664 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 18:58:44.402 14664 14702 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 18:58:44.402 14664 14703 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 18:58:44.405 14664 14664 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 18:58:44.405 14664 14664 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 18:58:44.416 14664 14664 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 14795) ---
+08-25 19:04:38.584 14795 14795 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 19:04:38.584 14795 14795 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 19:04:38.584 14795 14795 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 19:04:38.584 14795 14795 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 19:04:38.584 14795 14795 I adb     : main.cpp:63 
+08-25 19:04:38.591 14795 14795 I adb     : auth.cpp:416 adb_auth_init...
+08-25 19:04:38.596 14795 14795 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 19:04:38.596 14795 14795 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 19:04:38.598 14795 14800 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 19:04:38.598 14795 14801 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 19:04:38.600 14795 14795 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 19:04:38.600 14795 14795 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 19:04:38.625 14795 14795 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 19:04:41.615 14795 14809 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 19:04:41.616 14795 14810 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 19:04:41.618 14795 14795 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 19:04:41.618 14795 14795 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 19:04:41.623 14795 14795 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 15070) ---
+08-25 19:17:26.264 15070 15070 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 19:17:26.264 15070 15070 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 19:17:26.264 15070 15070 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 19:17:26.264 15070 15070 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 19:17:26.264 15070 15070 I adb     : main.cpp:63 
+08-25 19:17:26.270 15070 15070 I adb     : auth.cpp:416 adb_auth_init...
+08-25 19:17:26.287 15070 15070 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 19:17:26.287 15070 15070 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 19:17:26.294 15070 15081 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 19:17:26.294 15070 15082 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 19:17:26.295 15070 15070 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 19:17:26.295 15070 15070 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 19:17:26.319 15070 15070 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 19:17:29.312 15070 15116 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 19:17:29.313 15070 15117 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 19:17:29.314 15070 15070 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 19:17:29.315 15070 15070 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 19:17:29.320 15070 15070 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 14424) ---
+08-25 19:48:32.266 14424 14424 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 19:48:32.266 14424 14424 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 19:48:32.266 14424 14424 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 19:48:32.266 14424 14424 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 19:48:32.266 14424 14424 I adb     : main.cpp:63 
+08-25 19:48:32.285 14424 14424 I adb     : auth.cpp:416 adb_auth_init...
+08-25 19:48:32.307 14424 14424 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 19:48:32.307 14424 14424 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 19:48:35.328 14424 14877 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:36.002 14424 15019 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:36.484 14424 15076 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:36.791 14424 15120 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:37.555 14424 15179 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:37.906 14424 15224 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:56.364 14424 16934 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:56.556 14424 16937 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:56.956 14424 16940 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:57.169 14424 16949 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:57.396 14424 16954 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:57.687 14424 16969 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:58.088 14424 17069 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:58.678 14424 17193 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:58.930 14424 17214 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:48:59.202 14424 17225 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:13.950 14424 17619 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:14.102 14424 17624 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:14.260 14424 17629 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:14.409 14424 17634 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:14.573 14424 17644 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:14.727 14424 17650 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:14.875 14424 17655 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:15.032 14424 17660 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:15.186 14424 17665 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:15.347 14424 17670 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:15.500 14424 17675 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:49:15.657 14424 17680 W adb     : network.cpp:150 failed to connect to '127.0.0.1:5555': Connection refused
+08-25 19:50:40.004 14424 19495 I adb     : transport.cpp:341 192.168.1.57:34683: read thread spawning
+08-25 19:50:40.005 14424 19496 I adb     : transport.cpp:313 192.168.1.57:34683: write thread spawning
+08-25 19:50:40.043 14424 19495 I adb     : transport.cpp:360 192.168.1.57:34683: Received STLS packet. Stopping read thread.
+08-25 19:50:40.045 14424 19499 I adb     : auth.cpp:490 t->auth_key not set before handshake
+08-25 19:50:40.045 14424 19499 I adb     : transport.cpp:1710 fetching keys for transport 192.168.1.57:34683
+08-25 19:50:40.046 14424 19499 I adb     : auth.cpp:495 Attempting to TLS handshake
+08-25 19:50:40.053 14424 19499 I adb     : tls_connection.cpp:89 [client]: Initializing adbwifi TlsConnection
+08-25 19:50:40.053 14424 19499 I adb     : tls_connection.cpp:215 [client]: Starting adbwifi tls handshake
+08-25 19:50:40.259 14424 19499 I adb     : auth.cpp:513 adb_tls_set_certificate
+08-25 19:50:40.259 14424 19499 I adb     : auth.cpp:533 Checking for fingerprint match [9115F69B7FE700C4146D2A07935521ACDD8903CE409B0455DEA19BBAD09E7696]
+08-25 19:50:40.259 14424 19499 I adb     : auth.cpp:551 No match for [9115F69B7FE700C4146D2A07935521ACDD8903CE409B0455DEA19BBAD09E7696]
+08-25 19:50:40.259 14424 19499 I adb     : auth.cpp:533 Checking for fingerprint match [66269732B87D0379E7A1B82102E6C03F1AFE7CE463D20CF6D803E07DA1A670AF]
+08-25 19:50:40.259 14424 19499 I adb     : auth.cpp:551 No match for [66269732B87D0379E7A1B82102E6C03F1AFE7CE463D20CF6D803E07DA1A670AF]
+08-25 19:50:40.259 14424 19499 I adb     : auth.cpp:533 Checking for fingerprint match [7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9]
+08-25 19:50:40.259 14424 19499 I adb     : auth.cpp:542 Got SHA256 match on a key
+08-25 19:50:40.268 14424 19499 I adb     : tls_connection.cpp:302 [client]: Handshake succeeded.
+08-25 19:50:40.268 14424 19499 I adb     : auth.cpp:498 Handshake succeeded. Waiting for CNXN packet...
+08-25 19:50:40.269 14424 19502 I adb     : transport.cpp:341 192.168.1.57:34683: read thread spawning
+08-25 19:50:40.269 14424 14424 I adb     : adb.cpp:177 192.168.1.57:34683: already offline
+--- adb starting (pid 15294) ---
+08-25 20:06:25.862 15294 15294 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 20:06:25.862 15294 15294 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 20:06:25.862 15294 15294 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 20:06:25.862 15294 15294 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 20:06:25.862 15294 15294 I adb     : main.cpp:63 
+08-25 20:06:25.871 15294 15294 I adb     : auth.cpp:416 adb_auth_init...
+08-25 20:06:25.881 15294 15294 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 20:06:25.881 15294 15294 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 20:06:25.884 15294 15304 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 20:06:25.889 15294 15305 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 20:06:25.896 15294 15294 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 20:06:25.896 15294 15294 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 20:06:25.920 15294 15294 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 20:06:28.905 15294 15377 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:29.163 15294 15382 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:29.671 15294 15385 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:30.167 15294 15388 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:30.948 15294 15392 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:31.172 15294 15396 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:31.559 15294 15401 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:31.769 15294 15404 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:48.111 15294 15445 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:48.546 15294 15448 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:49.052 15294 15453 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:49.304 15294 15456 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:49.853 15294 15460 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:50.062 15294 15463 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:50.588 15294 15466 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:50.803 15294 15469 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:51.009 15294 15472 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:06:51.481 15294 15475 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:07:33.283 15294 15678 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:09:37.936 15294 16197 W adb     : network.cpp:150 failed to connect to '192.168.1.57:34683': Connection refused
+08-25 20:13:09.414 15294 25977 I adb     : transport.cpp:313 192.168.1.57:46463: write thread spawning
+08-25 20:13:09.415 15294 25976 I adb     : transport.cpp:341 192.168.1.57:46463: read thread spawning
+08-25 20:13:09.415 15294 25976 I adb     : transport.cpp:360 192.168.1.57:46463: Received STLS packet. Stopping read thread.
+08-25 20:13:09.416 15294 25978 I adb     : auth.cpp:490 t->auth_key not set before handshake
+08-25 20:13:09.416 15294 25978 I adb     : transport.cpp:1710 fetching keys for transport 192.168.1.57:46463
+08-25 20:13:09.416 15294 25978 I adb     : auth.cpp:495 Attempting to TLS handshake
+08-25 20:13:09.418 15294 25978 I adb     : tls_connection.cpp:89 [client]: Initializing adbwifi TlsConnection
+08-25 20:13:09.418 15294 25978 I adb     : tls_connection.cpp:215 [client]: Starting adbwifi tls handshake
+08-25 20:13:09.585 15294 25978 I adb     : auth.cpp:513 adb_tls_set_certificate
+08-25 20:13:09.585 15294 25978 I adb     : auth.cpp:533 Checking for fingerprint match [9115F69B7FE700C4146D2A07935521ACDD8903CE409B0455DEA19BBAD09E7696]
+08-25 20:13:09.585 15294 25978 I adb     : auth.cpp:551 No match for [9115F69B7FE700C4146D2A07935521ACDD8903CE409B0455DEA19BBAD09E7696]
+08-25 20:13:09.585 15294 25978 I adb     : auth.cpp:533 Checking for fingerprint match [66269732B87D0379E7A1B82102E6C03F1AFE7CE463D20CF6D803E07DA1A670AF]
+08-25 20:13:09.585 15294 25978 I adb     : auth.cpp:551 No match for [66269732B87D0379E7A1B82102E6C03F1AFE7CE463D20CF6D803E07DA1A670AF]
+08-25 20:13:09.585 15294 25978 I adb     : auth.cpp:533 Checking for fingerprint match [7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9]
+08-25 20:13:09.585 15294 25978 I adb     : auth.cpp:542 Got SHA256 match on a key
+08-25 20:13:09.589 15294 25978 I adb     : tls_connection.cpp:302 [client]: Handshake succeeded.
+08-25 20:13:09.589 15294 25978 I adb     : auth.cpp:498 Handshake succeeded. Waiting for CNXN packet...
+08-25 20:13:09.590 15294 26036 I adb     : transport.cpp:341 192.168.1.57:46463: read thread spawning
+08-25 20:13:09.594 15294 15294 I adb     : adb.cpp:177 192.168.1.57:46463: already offline
+--- adb starting (pid 14630) ---
+08-25 20:16:28.429 14630 14630 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 20:16:28.429 14630 14630 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 20:16:28.429 14630 14630 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 20:16:28.429 14630 14630 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 20:16:28.429 14630 14630 I adb     : main.cpp:63 
+08-25 20:16:28.437 14630 14630 I adb     : auth.cpp:416 adb_auth_init...
+08-25 20:16:28.445 14630 14630 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 20:16:28.445 14630 14630 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 20:16:28.447 14630 14637 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 20:16:28.448 14630 14638 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 20:16:28.449 14630 14630 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 20:16:28.449 14630 14630 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 20:16:28.474 14630 14630 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 20:16:31.717 14630 14643 W adb     : network.cpp:150 failed to connect to '192.168.1.57:46463': Connection refused
+--- adb starting (pid 15138) ---
+08-25 20:24:33.338 15138 15138 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 20:24:33.338 15138 15138 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 20:24:33.338 15138 15138 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 20:24:33.338 15138 15138 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 20:24:33.338 15138 15138 I adb     : main.cpp:63 
+08-25 20:24:33.347 15138 15138 I adb     : auth.cpp:416 adb_auth_init...
+08-25 20:24:33.356 15138 15138 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 20:24:33.356 15138 15138 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 20:24:33.358 15138 15145 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 20:24:33.359 15138 15146 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 20:24:33.361 15138 15138 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 20:24:33.361 15138 15138 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 20:24:33.390 15138 15138 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 20:24:36.373 15138 15147 W adb     : network.cpp:150 failed to connect to '192.168.1.57:46463': Connection refused
+08-25 20:24:36.546 15138 15150 W adb     : network.cpp:150 failed to connect to '192.168.1.57:46463': Connection refused
+08-25 20:24:36.679 15138 15153 W adb     : network.cpp:150 failed to connect to '192.168.1.57:46463': Connection refused
+08-25 20:24:36.814 15138 15156 W adb     : network.cpp:150 failed to connect to '192.168.1.57:46463': Connection refused
+08-25 20:24:36.938 15138 15159 W adb     : network.cpp:150 failed to connect to '192.168.1.57:46463': Connection refused
+08-25 20:24:37.070 15138 15162 W adb     : network.cpp:150 failed to connect to '192.168.1.57:46463': Connection refused
+--- adb starting (pid 14954) ---
+08-25 22:20:58.202 14954 14954 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 22:20:58.202 14954 14954 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 22:20:58.202 14954 14954 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 22:20:58.202 14954 14954 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 22:20:58.202 14954 14954 I adb     : main.cpp:63 
+08-25 22:20:58.213 14954 14954 I adb     : auth.cpp:416 adb_auth_init...
+08-25 22:20:58.219 14954 14954 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 22:20:58.219 14954 14954 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 22:20:58.221 14954 15077 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 22:20:58.221 14954 15078 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 22:20:58.223 14954 14954 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 22:20:58.223 14954 14954 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 22:20:58.248 14954 14954 I adb     : adb.cpp:181 emulator-5554: offline
+08-25 22:21:01.257 14954 15196 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-25 22:21:01.257 14954 15197 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-25 22:21:01.259 14954 14954 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-25 22:21:01.260 14954 14954 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 22:21:01.277 14954 14954 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 16191) ---
+08-25 23:48:31.395 16191 16191 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-25 23:48:31.395 16191 16191 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-25 23:48:31.395 16191 16191 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-25 23:48:31.395 16191 16191 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-25 23:48:31.395 16191 16191 I adb     : main.cpp:63 
+08-25 23:48:31.399 16191 16191 I adb     : auth.cpp:416 adb_auth_init...
+08-25 23:48:31.410 16191 16191 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-25 23:48:31.410 16191 16191 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-25 23:48:31.421 16191 16203 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-25 23:48:31.421 16191 16204 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-25 23:48:31.422 16191 16191 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-25 23:48:31.422 16191 16191 I adb     : auth.cpp:468 Calling send_auth_response
+08-25 23:48:31.447 16191 16191 I adb     : adb.cpp:181 emulator-5554: offline
+--- adb starting (pid 15747) ---
+08-26 00:07:34.732 15747 15747 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-26 00:07:34.732 15747 15747 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-26 00:07:34.732 15747 15747 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-26 00:07:34.732 15747 15747 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-26 00:07:34.732 15747 15747 I adb     : main.cpp:63 
+08-26 00:07:34.741 15747 15747 I adb     : auth.cpp:416 adb_auth_init...
+08-26 00:07:34.748 15747 15747 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-26 00:07:34.748 15747 15747 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-26 00:07:34.751 15747 15753 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-26 00:07:34.751 15747 15755 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-26 00:07:34.752 15747 15747 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-26 00:07:34.752 15747 15747 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 00:07:34.776 15747 15747 I adb     : adb.cpp:181 emulator-5554: offline
+08-26 00:07:37.765 15747 15759 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-26 00:07:37.767 15747 15760 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-26 00:07:37.768 15747 15747 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-26 00:07:37.768 15747 15747 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 00:07:37.775 15747 15747 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 14987) ---
+08-26 00:36:10.272 14987 14987 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-26 00:36:10.272 14987 14987 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-26 00:36:10.272 14987 14987 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-26 00:36:10.272 14987 14987 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-26 00:36:10.272 14987 14987 I adb     : main.cpp:63 
+08-26 00:36:10.278 14987 14987 I adb     : auth.cpp:416 adb_auth_init...
+08-26 00:36:10.289 14987 14987 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-26 00:36:10.289 14987 14987 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-26 00:36:10.302 14987 14995 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-26 00:36:10.303 14987 14996 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-26 00:36:10.305 14987 14987 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-26 00:36:10.305 14987 14987 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 00:36:10.331 14987 14987 I adb     : adb.cpp:181 emulator-5554: offline
+08-26 00:36:13.303 14987 15049 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-26 00:36:13.304 14987 15051 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-26 00:36:13.305 14987 14987 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-26 00:36:13.305 14987 14987 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 00:36:13.308 14987 14987 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 16938) ---
+08-26 01:04:25.845 16938 16938 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-26 01:04:25.845 16938 16938 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-26 01:04:25.845 16938 16938 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-26 01:04:25.845 16938 16938 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-26 01:04:25.845 16938 16938 I adb     : main.cpp:63 
+08-26 01:04:25.850 16938 16938 I adb     : auth.cpp:416 adb_auth_init...
+08-26 01:04:25.856 16938 16938 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-26 01:04:25.856 16938 16938 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-26 01:04:25.859 16938 16948 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-26 01:04:25.859 16938 16949 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-26 01:04:25.861 16938 16938 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-26 01:04:25.861 16938 16938 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 01:04:25.885 16938 16938 I adb     : adb.cpp:181 emulator-5554: offline
+08-26 01:04:28.870 16938 16961 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-26 01:04:28.870 16938 16962 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-26 01:04:28.871 16938 16938 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-26 01:04:28.871 16938 16938 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 01:04:28.876 16938 16938 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 15016) ---
+08-26 01:15:50.022 15016 15016 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-26 01:15:50.022 15016 15016 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-26 01:15:50.022 15016 15016 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-26 01:15:50.022 15016 15016 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-26 01:15:50.022 15016 15016 I adb     : main.cpp:63 
+08-26 01:15:50.028 15016 15016 I adb     : auth.cpp:416 adb_auth_init...
+08-26 01:15:50.033 15016 15016 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-26 01:15:50.033 15016 15016 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-26 01:15:50.036 15016 15023 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-26 01:15:50.036 15016 15024 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-26 01:15:50.038 15016 15016 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-26 01:15:50.038 15016 15016 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 01:15:50.063 15016 15016 I adb     : adb.cpp:181 emulator-5554: offline
+08-26 01:15:53.052 15016 15065 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-26 01:15:53.053 15016 15066 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-26 01:15:53.054 15016 15016 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-26 01:15:53.054 15016 15016 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 01:15:53.059 15016 15016 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 14517) ---
+08-26 01:35:23.740 14517 14517 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-26 01:35:23.740 14517 14517 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-26 01:35:23.740 14517 14517 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-26 01:35:23.740 14517 14517 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-26 01:35:23.740 14517 14517 I adb     : main.cpp:63 
+08-26 01:35:23.747 14517 14517 I adb     : auth.cpp:416 adb_auth_init...
+08-26 01:35:23.763 14517 14517 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-26 01:35:23.763 14517 14517 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-26 01:35:23.765 14517 14524 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-26 01:35:23.766 14517 14525 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-26 01:35:23.767 14517 14517 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-26 01:35:23.767 14517 14517 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 01:35:23.800 14517 14517 I adb     : adb.cpp:181 emulator-5554: offline
+08-26 01:35:26.784 14517 14535 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-26 01:35:26.784 14517 14536 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-26 01:35:26.786 14517 14517 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-26 01:35:26.786 14517 14517 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 01:35:26.797 14517 14517 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 14591) ---
+08-26 01:44:08.186 14591 14591 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-26 01:44:08.186 14591 14591 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-26 01:44:08.186 14591 14591 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-26 01:44:08.186 14591 14591 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-26 01:44:08.186 14591 14591 I adb     : main.cpp:63 
+08-26 01:44:08.191 14591 14591 I adb     : auth.cpp:416 adb_auth_init...
+08-26 01:44:08.199 14591 14591 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-26 01:44:08.199 14591 14591 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-26 01:44:08.202 14591 14598 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-26 01:44:08.206 14591 14599 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-26 01:44:08.208 14591 14591 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-26 01:44:08.208 14591 14591 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 01:44:08.239 14591 14591 I adb     : adb.cpp:181 emulator-5554: offline
+--- adb starting (pid 14602) ---
+08-26 02:16:37.142 14602 14602 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-26 02:16:37.142 14602 14602 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-26 02:16:37.142 14602 14602 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-26 02:16:37.142 14602 14602 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-26 02:16:37.142 14602 14602 I adb     : main.cpp:63 
+08-26 02:16:37.149 14602 14602 I adb     : auth.cpp:416 adb_auth_init...
+08-26 02:16:37.154 14602 14602 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-26 02:16:37.155 14602 14602 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-26 02:16:37.157 14602 14609 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-26 02:16:37.157 14602 14610 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-26 02:16:37.159 14602 14602 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-26 02:16:37.159 14602 14602 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 02:16:37.184 14602 14602 I adb     : adb.cpp:181 emulator-5554: offline
+08-26 02:16:40.178 14602 14671 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-26 02:16:40.178 14602 14672 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-26 02:16:40.180 14602 14602 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-26 02:16:40.180 14602 14602 I adb     : auth.cpp:468 Calling send_auth_response
+08-26 02:16:40.192 14602 14602 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+08-26 02:59:16.944 14602  8827 I adb     : transport.cpp:300 BlockingConnectionAdapter(<unknown>): destructing
+08-26 02:59:16.945 14602  8827 I adb     : transport.cpp:401 BlockingConnectionAdapter(<unknown>): not started
+--- adb starting (pid 14567) ---
+08-27 17:48:31.315 14567 14567 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-27 17:48:31.315 14567 14567 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-27 17:48:31.315 14567 14567 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-27 17:48:31.315 14567 14567 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-27 17:48:31.315 14567 14567 I adb     : main.cpp:63 
+08-27 17:48:31.325 14567 14567 I adb     : auth.cpp:416 adb_auth_init...
+08-27 17:48:31.344 14567 14567 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-27 17:48:31.344 14567 14567 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-27 17:48:31.377 14567 14649 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-27 17:48:31.380 14567 14648 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-27 17:48:31.413 14567 14567 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-27 17:48:31.413 14567 14567 I adb     : auth.cpp:468 Calling send_auth_response
+08-27 17:48:31.520 14567 14567 I adb     : adb.cpp:181 emulator-5554: offline
+08-27 17:54:04.493 14567 21060 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-27 17:54:04.495 14567 21061 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-27 17:54:04.496 14567 14567 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-27 17:54:04.496 14567 14567 I adb     : auth.cpp:468 Calling send_auth_response
+08-27 17:54:04.506 14567 14567 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 32616) ---
+08-27 18:20:30.651 32616 32616 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-27 18:20:30.651 32616 32616 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-27 18:20:30.651 32616 32616 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-27 18:20:30.651 32616 32616 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-27 18:20:30.651 32616 32616 I adb     : main.cpp:63 
+08-27 18:20:30.656 32616 32616 I adb     : auth.cpp:416 adb_auth_init...
+08-27 18:20:30.662 32616 32616 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-27 18:20:30.662 32616 32616 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-27 18:20:30.669 32616 32621 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-27 18:20:30.669 32616 32622 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-27 18:20:30.673 32616 32616 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-27 18:20:30.673 32616 32616 I adb     : auth.cpp:468 Calling send_auth_response
+08-27 18:20:30.698 32616 32616 I adb     : adb.cpp:181 emulator-5554: offline
+08-27 18:28:20.130 32616 15588 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-27 18:28:20.134 32616 15585 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-27 18:28:20.135 32616 32616 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-27 18:28:20.135 32616 32616 I adb     : auth.cpp:468 Calling send_auth_response
+08-27 18:28:20.162 32616 32616 I adb     : adb.cpp:181 127.0.0.1:5555: offline
+--- adb starting (pid 14197) ---
+08-27 20:32:32.198 14197 14197 I adb     : main.cpp:63 Android Debug Bridge version 1.0.41
+08-27 20:32:32.198 14197 14197 I adb     : main.cpp:63 Version 35.0.2-android-tools
+08-27 20:32:32.198 14197 14197 I adb     : main.cpp:63 Installed as /usr/local/bin/adb
+08-27 20:32:32.198 14197 14197 I adb     : main.cpp:63 Running on Linux 6.17.0-PRoot-Distro (aarch64)
+08-27 20:32:32.198 14197 14197 I adb     : main.cpp:63 
+08-27 20:32:32.225 14197 14197 I adb     : auth.cpp:416 adb_auth_init...
+08-27 20:32:32.244 14197 14197 I adb     : auth.cpp:152 loaded new key from '/root/.android/adbkey' with fingerprint 7CADFE1A1334DABEE149F7CD8E6ABD3CC128530F9B7E21F0DE00D4A60CD41CF9
+08-27 20:32:32.245 14197 14197 I adb     : auth.cpp:391 adb_auth_inotify_init...
+08-27 20:32:32.250 14197 14280 I adb     : transport.cpp:341 emulator-5554: read thread spawning
+08-27 20:32:32.251 14197 14281 I adb     : transport.cpp:313 emulator-5554: write thread spawning
+08-27 20:32:32.253 14197 14197 I adb     : transport.cpp:1710 fetching keys for transport emulator-5554
+08-27 20:32:32.254 14197 14197 I adb     : auth.cpp:468 Calling send_auth_response
+08-27 20:32:32.281 14197 14197 I adb     : adb.cpp:181 emulator-5554: offline
+08-27 20:32:47.104 14197 15139 I adb     : transport.cpp:341 127.0.0.1:5555: read thread spawning
+08-27 20:32:47.104 14197 15140 I adb     : transport.cpp:313 127.0.0.1:5555: write thread spawning
+08-27 20:32:47.111 14197 14197 I adb     : transport.cpp:1710 fetching keys for transport 127.0.0.1:5555
+08-27 20:32:47.111 14197 14197 I adb     : auth.cpp:468 Calling send_auth_response
+08-27 20:32:47.117 14197 14197 I adb     : adb.cpp:181 127.0.0.1:5555: offline

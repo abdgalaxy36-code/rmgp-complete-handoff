@@ -17,10 +17,6 @@
 
 #define FUTEX_SZ (64ULL<<30)
 #define FUTEX_MMAP_SZ (1ULL<<30)
-/* Per-waiter-thread stack for __increase(). Kept tiny so a full
-   SLIDE_KSNITCH_APPENDED_FUTEXES (2048) pile-up fits the 2nd pass's
-   fragmented VA without crashing the device. */
-#define KS_THREAD_STACK_SZ (512 * 1024)
 #ifndef PAGE_SIZE
 #define PAGE_SIZE 4096
 #endif
@@ -152,24 +148,13 @@ static void __increase(struct kernelsnitch_shared_state *ks, size_t id, size_t a
     ASSERT_pr((ks->increase_tids != NULL), "failed to allocate futex waiter ids\n");
     ks->increase_count = amount;
     ks->increase_id = id;
-    /* Use a small fixed stack per waiter thread. The default glibc stack is
-       8MiB, so N appended_futexes threads demand N*8MiB of virtual address
-       space. In the 2nd KernelSnitch pass the child inherits a heavily
-       fragmented VA (parent's 64GiB PROT_NONE futex arena + pipe/memfd
-       mappings), and 2048*8MiB=16GiB fails to mmap -> the pass crashes the
-       device. 512KiB is ample for the trivial __do_increase body and cuts the
-       requirement to ~1GiB, matching the 1st pass's signal profile safely. */
-    pthread_attr_t attr;
-    pthread_attr_init(&attr);
-    pthread_attr_setstacksize(&attr, KS_THREAD_STACK_SZ);
     for (size_t i = 0; i < amount; ++i) {
         struct inc_arg *inc_arg = calloc(1, sizeof(struct inc_arg));
         inc_arg->id = id;
         inc_arg->ks = ks;
-        SYSCHK(pthread_create(&ks->increase_tids[i], &attr, __do_increase,
+        SYSCHK(pthread_create(&ks->increase_tids[i], 0, __do_increase,
                               (void *)inc_arg));
     }
-    pthread_attr_destroy(&attr);
     WAIT();
 }
 

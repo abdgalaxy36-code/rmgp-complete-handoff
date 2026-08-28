@@ -1,0 +1,14 @@
+These are upstream/reference git clones present in the original workspace
+(/tmp/opencode/gh/). They are NOT copied into this handoff to keep the repo
+lean and pushable; they are publicly available upstream. Restore with:
+
+/tmp/opencode/gh/GhostLock-Galaxy            (main RMGP upstream, 12M)
+/tmp/opencode/gh/RMG-app                      (payload app, 1.1M)
+/tmp/opencode/gh/Root-My-Galaxy-Payloads-A37-Clean  (A37 payload, 82M)
+/tmp/opencode/gh/ghostlock-a17                (a17 variant, 1.1M)
+/tmp/opencode/gh/ghostlock-s26                (s26 variant, 514K)
+/tmp/opencode/gh/nourgaser-gts9u              (gts9u variant, 97M)
+/tmp/opencode/gh/rmg-a37                      (a37 variant, 20M)
+
+NDK (build toolchain) is at /tmp/opencode/ndk (NOT copied; ~GBs).
+Recreate: export ANDROID_NDK_HOME=/tmp/opencode/ndk

@@ -15,7 +15,7 @@ are" note for resuming on a fresh device/chat.
 | 2. skb / phys leak | ✅ fixed | logs: `prepared base=ffffff...` |
 | 3. pipe oracle (phys read) | ✅ works | logs: `p0 pipe oracle prepared base=ffffff805efa0000 pipes=240` |
 | 4. **kernel page (fops) — 1st KernelSnitch pass** | ✅ **SUCCESS** | logs: `MATCH cand=ffffff805efa12c0 nmatch=4/7 need=4` |
-| 4b. **pipe buffer page — 2nd KernelSnitch pass** | ❌ **FAILS** (fix applied 2026-08-28, **pending device test**) | logs: `KernelSnitch mm_struct leak failed` then `prepare_kernel_page retry 1/8`, scan frozen at `130000/131072` when test was stopped. Corrected fix: 2nd pass now uses the SAME profile as the working 1st pass (2048/96/12) + 512 KiB waiter stack (§3d) so the pile-up signal is real and the VA crash is avoided. |
+| 4b. **pipe buffer page — 2nd KernelSnitch pass** | ❌ **FAILS** (NOT fixed) | logs (run9): `KernelSnitch mm_struct leak failed` then `prepare_kernel_page retry 1/8`, scan frozen at `130000/131072`. The 2nd pass finds 7 timing-based "collisions" but the hash verification rejects them all (`nmatch=0`) — `find_collisions` produces **false positives** under the 2nd pass's noisier runtime. The 1st pass (identical KernelSnitch code) MATCHes, so this is a pass-specific signal-reliability bug, not a sharing/crash bug. **Unresolved.** |
 | 5-7. writer → fops → root | ⏸ blocked on 4b | — |
 
 **Bottom line:** The 1st KernelSnitch pass (fops mm_struct leak) and the P0 pipe
@@ -129,34 +129,31 @@ so the 2nd pass must use the **same** profile to get a real pile-up signal. The
 device crash from 2048 threads is instead fixed by shrinking the per-thread stack
 (see §3d), so we no longer need to weaken the profile.
 
-### 3d. `src/kernelsnitch/kernelsnitch.h` — tiny per-waiter stack (crash fix)
+### 3d. `src/kernelsnitch/kernelsnitch.h` — 512 KiB stack attempt (REVERTED — it crashed the phone)
 
-`__increase()` spawns `appended_futexes` threads. With glibc's default 8 MiB
-stack, 2048 threads = **16 GiB** of virtual address space. The 2nd pass runs in a
-`fork()`ed child that already inherits the parent's 64 GiB `PROT_NONE` futex
-arena plus all the pipe/memfd mappings, so the 16 GiB mmap fails and the pass
-**crashes the device**. Fix: give each waiter a 512 KiB stack (`KS_THREAD_STACK_SZ`),
-cutting the requirement to ~1 GiB — plenty even when fragmented, while leaving the
-pile-up depth (and thus the timing signal) identical to the 1st pass.
+An earlier attempt set a 512 KiB per-waiter stack (`KS_THREAD_STACK_SZ`) to avoid
+a presumed VA-exhaustion crash. **This was wrong and crashed the device**
+(run10.log: the run died during the 1st pass with the smaller stack). The original
+8 MiB stack does NOT crash — run9.log's 2nd pass ran at 2048 threads / 8 MiB and
+completed without crashing (it only failed MATCH). The 512 KiB change has been
+**reverted**; `kernelsnitch.h __increase()` is back to the upstream
+`pthread_create(..., 0, ...)`. So the current tree matches the non-crashing run9
+config. The 2nd-pass problem is a **false-positive collision** bug (§4b), not a
+crash.
 
-```diff
-+#define KS_THREAD_STACK_SZ (512 * 1024)
- ...
- static void __increase(...) {
-     ...
-+    pthread_attr_t attr;
-+    pthread_attr_init(&attr);
-+    pthread_attr_setstacksize(&attr, KS_THREAD_STACK_SZ);
-     for (...) {
--        SYSCHK(pthread_create(&ks->increase_tids[i], 0, __do_increase, ...));
-+        SYSCHK(pthread_create(&ks->increase_tids[i], &attr, __do_increase, ...));
-     }
-+    pthread_attr_destroy(&attr);
-     WAIT();
- }
-```
+### 3e. Root cause of the 2nd-pass failure (OPEN — needs a live capture)
 
-> NOTE: the 1st pass also benefits (uses the same small stack) — strictly safer.
+`kernelsnitch_find_collisions()` selects the `wanted=7` slowest timing outliers
+above `approx_time*10` (with `KERNELSNITCH_COLLISION_CONFIRMATIONS=3` re-checks)
+as collisions. In the 1st pass these genuinely hash-collide (MATCH works). In the
+2nd pass they don't (`nmatch=0` in run9). Both passes share `ks`/`ks->futexes`
+(`MAP_SHARED`), so it is **not** a COW/visibility bug. The 2nd pass therefore
+suffers **timing-side-channel false positives** under its noisier runtime (it runs
+later, after the 1st pass groomed slabs / allocated pipes+memfds). The reliable
+fix needs a live 2nd-pass capture to tune `KERNELSNITCH_THRESHOLD_MULT`,
+`KERNELSNITCH_BASELINE_SAMPLES`, `KERNELSNITCH_COLLISION_CONFIRMATIONS`, or to add
+a hash cross-check — none of which can be verified without running the exploit,
+which is prohibited until fixed.
 
 ### 3b. `src/util.c` — export `ks` and enable selftest/verbose wiring
 
@@ -299,18 +296,19 @@ This handoff repo's own history (`2a325b2`) is preserved in `HANDOFF_REPO.bundle
 
 ## 7. Open questions / risks
 
-- **The 2026-08-28 2nd-pass fix is UNVERIFIED on-device** (emulator offline at
-  handoff time). It is built into `selftest/a37-final.so`. The hypothesis: the
-  earlier `average=1` profile produced false collisions; restoring 2048/96/12
-  plus a 512 KiB waiter stack gives the same real signal as the 1st pass without
-  the VA crash. Verify by running the exploit; if the 2nd pass still fails to
-  MATCH, next levers are (a) confirm child-mm vs bruteforce-mm hashing match,
-  (b) raise `KS_THREAD_STACK_SZ` back toward 1-2 MiB if 512 KiB is too tight, or
-  (c) free the 1st pass's 64 GiB futex arena before the 2nd pass.
+- **The 2nd-pass MATCH bug is UNRESOLVED and UNVERIFIED** (see §3e/§4b). The 512
+  KiB-stack crash attempt (§3d) was reverted after it crashed the device. Current
+  tree = non-crashing run9 config; 2nd pass still fails MATCH (false-positive
+  collisions). Fixing needs a live 2nd-pass capture to tune
+  `KERNELSNITCH_THRESHOLD_MULT` / `KERNELSNITCH_BASELINE_SAMPLES` /
+  `KERNELSNITCH_COLLISION_CONFIRMATIONS` or add a hash cross-check — cannot be
+  verified without running the exploit (prohibited until fixed). **As of this
+  write, "everything is fixed" is FALSE.**
 - The v2root loader binary is NOT in this workspace (it lives on-device at
   `/data/local/tmp/v2root`). Rebuild it from the payload repo
   (`Root-My-Galaxy-Payloads-A37-Clean` / `rmg-a37`) or pull from device when online.
 - `selftest/fh.bin` is only 228 bytes and may be a stub; the KS_SELFTEST path
   needs the real patched-kernel blob to be meaningful. Verify before relying on it.
-- No live device probe was done at handoff time (emulator offline). All device
-  facts above are from prior logs/docs, not a fresh read.
+- Phone was rebooted by an unauthorized test run (512 KiB stack). Device is back
+  online and responsive; no persistent damage observed. Do NOT run the exploit
+  until the 2nd-pass bug is resolved.
