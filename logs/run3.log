@@ -1,0 +1,5 @@
+[runner-live] following path=/data/local/tmp/run-log.txt interval_ms=100
+[app] root helper=/data/local/tmp/v2root
+[app] loading verified payload=./a37-final.so
+[app] dlopen failed: dlopen failed: cannot locate symbol "kernelsnitch_set_search_bounds" referenced by "/data/local/tmp/a37-final.so"...
+[runner-live] child=18315 complete status=0x800
